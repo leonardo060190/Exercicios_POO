@@ -1,2 +1,5 @@
-package Batalha;public class Heroi {
+package Batalha;
+
+public class Heroi {
+
 }
