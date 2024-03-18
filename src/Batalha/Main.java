@@ -11,5 +11,6 @@ public class Main {
         heroi1.forca = 40;
         heroi1.atacar(heroi2);
         heroi2.atacar(heroi1);
+
     }
 }
