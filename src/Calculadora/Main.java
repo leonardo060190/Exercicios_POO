@@ -18,9 +18,9 @@ public class Main {
         resultadoMultiplicar = calculadora.multiplicar(5,10);
         System.out.println("A Subtração é: " + resultadoMultiplicar);
 
-//        double resultadoDividir = 0;
-//        resultadoDividir = calculadora.dividir(5,10);
-//        System.out.println("A Subtração é: " + resultadoDividir);
+        double resultadoDividir = 0;
+        resultadoDividir = calculadora.dividir(5,10);
+        System.out.println("A Subtração é: " + resultadoDividir);
 }
 
 
