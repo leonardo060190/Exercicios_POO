@@ -4,7 +4,7 @@ public class ContaBancaria {
 
     String titular;
 
-    double saldo;
+    double saldo = 0;
 
 
     public void depositar(double valor, String titular){
