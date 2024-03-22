@@ -15,25 +15,22 @@ public class Relogio {
         }
     }
 
-    public void adicionarMinuto(){
-        this.minuto ++;
-        this.hora += this.minuto / 60;
-        this.minuto %= 60;
-        this.hora %= 24;
-    }
-
     public void adicionarSegundo(){
-        this.segundo ++;
-        this.minuto += this.segundo / 60;
-        this.segundo %= 60;
-        this.hora += this.minuto / 60;
-        this.minuto %= 60;
-        this.hora %= 24;
+        segundo++;
+        if (segundo == 60){
+            this.adicionarMinuto();
+            segundo = 0;
+        }
     }
-
-    public void exibirHora(){
-        System.out.printf("%02d:%02d:%02d\n", this.hora, this.minuto, this.segundo);
+    public void adicionarMinuto(){
+        minuto++;
+        if (minuto == 60){
+            this.adicionarHora();
+            minuto = 0;
+        }
     }
-
+    public void exibirHorario(){
+        System.out.println("A hora atual é:"+hora+":"+minuto+":"+segundo);
+    }
 
 }

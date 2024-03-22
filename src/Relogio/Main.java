@@ -22,8 +22,7 @@ public class Main {
         relogio.adicionarSegundo();
 
 
-        relogio.exibirHora();
-
+        relogio.exibirHorario();
 
     }
 }
