@@ -14,6 +14,9 @@ public class Main {
         String cpf = leia.next();
 
         Pessoa pessoa = new Pessoa(nome, idade, cpf);
+
+        pessoa.exibirSaudacao();
+
         System.out.println(pessoa);
 
     }

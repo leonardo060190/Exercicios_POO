@@ -38,6 +38,10 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
+    public void exibirSaudacao(){
+        System.out.println("Olá "+this.nome);
+    }
+
     @Override
     public String toString() {
         return
