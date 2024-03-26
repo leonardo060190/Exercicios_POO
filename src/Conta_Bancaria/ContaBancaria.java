@@ -1,13 +1,20 @@
 package Conta_Bancaria;
 
+import Pessoa.Pessoa;
+
 public class ContaBancaria {
 
-    String titular;
+    private int numero;
+    Pessoa titular;
 
-    double saldo = 0;
+   private double saldo = 0;
 
+//    public ContaBancaria(double saldo) {
+//        this.saldo = saldo;
+//
+//    }
 
-    public void depositar(double valor, String titular){
+        public void depositar(double valor, String titular){
         this.saldo = this.saldo + valor;
         System.out.println("Titular: " + titular);
         System.out.println("Depositar: " + valor);
@@ -27,5 +34,12 @@ public class ContaBancaria {
             System.out.println("Valor insuficiente");
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return
+                "titular=" + titular +
+                ", saldo=" + saldo;
     }
 }
