@@ -1,29 +1,41 @@
 package Conta_Bancaria;
 
+import Pessoa.Pessoa;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ContaBancaria contaBancaria = new ContaBancaria();
+
 
         Scanner leia = new Scanner(System.in);
 
+        System.out.println("Digite o número da conta: ");
+        int numeroConta = leia.nextInt();
+
         System.out.println("Digite o nome do titular: ");
-        String titular = leia.next();
+        String nomeTitular = leia.next();
 
-        System.out.println("Digite o valor: ");
-        double valor = leia.nextDouble();
+        Pessoa titular = new Pessoa(nomeTitular,0,"");
 
-        contaBancaria.depositar(valor, titular);
+        ContaBancaria contaBancaria = new ContaBancaria(numeroConta, titular);
 
-        System.out.println("Digite o nome do titular para saque: ");
-        String titularSaque = leia.next();
+        System.out.println("Digite o valor para depositar: ");
+        double valorDeposito = leia.nextDouble();
 
-        System.out.println("Digite o valor: ");
+        // Realizando depósito na conta bancária
+        contaBancaria.depositar(valorDeposito);
+
+        System.out.println("Digite o valor para saque: ");
         double valorSaque = leia.nextDouble();
-        contaBancaria.sacar(valorSaque,titularSaque);
+
+        // Realizando saque na conta bancária
+        contaBancaria.sacar(valorSaque);
+
+        // Exibindo informações da conta bancária
+        System.out.println(contaBancaria);
 
 
     }
